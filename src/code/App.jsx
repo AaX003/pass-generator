@@ -25,7 +25,6 @@ function PasswordGenerator() {
     const num = "0123456789";
     const special = "@$!%*?&#";
     const spacing = "_";
-    const encrypt = "*";
 
     // checks which requirements have been selected
     let req = "";
@@ -34,7 +33,6 @@ function PasswordGenerator() {
     if (num) req += num;
     if (specialChars) req += special;
     if (spaces) req += spacing;
-    if (encrypt) req += disguise;
 
     if (!req) return setPass(""); // if none have been checked, return password as-is
 
